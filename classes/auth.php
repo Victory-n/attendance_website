@@ -1,14 +1,14 @@
 <?php
 class Auth {
-    private $dbLogic;
+    private $student;
 
-    // Constructor to initialize the DbLogic object
-    public function __construct($dbLogic) {
-        $this->dbLogic = $dbLogic;
+    // Constructor to initialize the Student object
+    public function __construct($student) {
+        $this->student = $student;
     }
 
     // Register function to create a new user
-    public function register($fName, $lName, $username, $password) {
+    public function register($fName, $lName, $username, $email, $password) {
 
         // Validate password (simple example: length check)
         if (strlen($password) < 8) {
@@ -18,19 +18,20 @@ class Auth {
         // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-        // Use DbLogic to insert the user
-        return $this->dbLogic->insertUser($fName, $lName, $username, $hashedPassword);
+        // Use Student to create the student
+        return $this->student->createStudent($fName, $lName, $username, $email, $hashedPassword);
     }
 
     // Login function to authenticate a user
     public function login($username, $password) {
 
-        // Use DbLogic to get the stored hashed password and name
-        $user = $this->dbLogic->getUserByUsername($username);
+        // Use Student to get the stored hashed password and username
+        $user = $this->student->getUserByUsername($username);
 
         if ($user && password_verify($password, $user['password'])) {
             session_start();
             $_SESSION['username'] = $user['username'];
+            $_SESSION['user_id'] = $user['id'];
             
             return "Login successful. Welcome, " . $_SESSION['username'] . "!";
         } else {

@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Database Administration",
+        "startTime": "09:00:00",
+        "stopTime": "17:00:00",
+        "days": 
+            {
+                "0": "Tuesday",
+                "1": "Thursday"
+            }
+    },
+    {
+        "name": "Python Programming",
+        "startTime": "09:00:00",
+        "stopTime": "17:00:00",
+        "days": 
+            {
+                "0": "Tuesday",
+                "1": "Thursday"
+            }
+    },
+    {
+        "name": "PHP Programming",
+        "startTime": "09:00:00",
+        "stopTime": "17:00:00",
+        "days": 
+            {
+                "0": "Tuesday",
+                "1": "Thursday",
+                "2": "Friday"
+            }
+    }
+]
