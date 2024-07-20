@@ -2,7 +2,7 @@
 include 'classes/db-logic.php';
 include 'classes/auth.php';
 include 'classes/student.php';
-
+#love is God
 // Initialize the Student class
 $student = new Student($pdo);
 
