@@ -1,5 +1,5 @@
 
-  <header class="header-area header-sticky">
+<header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -12,9 +12,7 @@
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                    <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="login.php" >Login</a></li>
-                      <li class="scroll-to-section"><a href="register.php">Register Now!</a></li>
+                      <li class="scroll-to-section"><a href="login.php" class="active">log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
